@@ -7,6 +7,8 @@ public class Game {
     // change these to match weapon/spell types
     static final String[] WEAKNESSES = {"Weakness #1", "Weakness #2", "Weakness #3"};
 
+    
+    
     public static void main(String[] args) {
         int roundNum = 0;
         Scanner kbd = new Scanner(System.in);
@@ -23,6 +25,11 @@ public class Game {
 
     }
 
+    
+    /** 
+     * Makes a Character based on user input
+     * @param in Scanner used for input
+     */
     public static void makeCharacter(Scanner in) {
         System.out.print("What will your character's name be?\n> ");
         String name = in.nextLine();
@@ -78,6 +85,11 @@ public class Game {
         
     }
 
+    
+    /** 
+     * Generates an enemy at the same level as this.player
+     * @return Character the generated enemy
+     */
     public static Character makeEnemy() {
         int randWeakness = (int)(Math.random()*WEAKNESSES.length);
 
